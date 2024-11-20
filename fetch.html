@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch</title>
+</head>
+<body>
+    <input type="text"/>
+    <input type="button" value="submit"/>
+    <br><br>
+    <input type="button" value="old data" id="data" />
+    <table id="dataTable" style="border: 1;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Condition</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
+    <script>
+        const data = document.getElementById("data").onclick = fetchdata;
+        function fetchdata(){
+            fetch("JSON/fetch.json")
+        .then(response => response.json())  
+            .then(data => {
+                console.log(data);
+            })
+        }
+        
+    </script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hey i am index file</h1>
+    <button onclick="run()">get data</button>
+    <input type="text">
+    <button onclick="submit()">submit</button>
+    <script>
+        function run(){
+            fetch("/getdata").then((res)=>{
+return res.json();
+            }).then((res)=>{
+                craeteTable(res);
+            }).catch((e)=>{
+                console.log(e);
+                alert("error");
+            })
+        }
+
+        function submit(){
+            fetch("/data")   //get /data?condition=input.value   //post body:({conditon:input.value})
+        }
+        function craeteTable(data){
+            //data dom table
+        }
+    </script>
+</body>
+</html>

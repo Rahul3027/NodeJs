@@ -1,0 +1,5 @@
+[
+    { "id": 1, "name": "Product 1", "price": 50.00, "date": "2024-09-25" },
+    { "id": 2, "name": "Product 2", "price": 75.00, "date": "2024-09-20" },
+    { "id": 3, "name": "Product 3", "price": 100.00, "date": "2024-09-15" }
+]
